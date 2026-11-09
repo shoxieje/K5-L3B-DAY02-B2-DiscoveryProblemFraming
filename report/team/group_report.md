@@ -107,7 +107,7 @@ Kết quả (10 người trả lời, 09/11/2026; Toán 3, Lý 2, Hóa 2, Anh 1,
 | Thời gian mỗi đề | Dưới 30' **2** · 30–60' **4** · 1–2 giờ **3** · Trên 2 giờ **1** |
 | Bước tốn thời gian nhất | Tìm và chọn câu **5** · Kiểm tra đáp án **2** · Gõ lại/dựng đề **2** · Đưa lên hệ thống/in **1** |
 | Lần gần nhất phải dùng lại đề cũ vì không kịp | Tuần này **2** · Tháng này **4** · Lâu hơn **2** · Chưa bao giờ **2** |
-| Công cụ đang dùng | Phần lớn là Word (kèm MathType, đề cũ, sách tham khảo); 2 người có ngân hàng câu hỏi; 1 người đã dùng AI; 1 người dùng LaTeX/GeoGebra |
+| Công cụ đang dùng | Phần lớn là Word (kèm MathType, đề cũ, sách tham khảo); 3 người có ngân hàng câu hỏi; 1 người đã dùng AI; 1 người dùng LaTeX/GeoGebra |
 
 Phỏng vấn: **chưa thực hiện**. Nhóm đã chọn 3 người từ danh sách trả lời survey và viết sẵn giả thuyết cần kiểm cho từng người (xem [`report/assets/cp4-interview-snapshots.md`](../assets/cp4-interview-snapshots.md)):
 
@@ -204,9 +204,9 @@ TƯƠNG LAI — Workflow, khoảng 11–19 phút/đề (kỳ vọng, chưa đo; 
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | 5 (1a, 1b, 2, 3a hoặc 3b) | 5 (nhập yêu cầu, Rule lọc, AI đề xuất, duyệt, xuất) | Số bước không đổi, nhưng 3 bước chuyển từ làm tay sang Rule hoặc AI |
+| Số bước | 4 (1a, 1b, 2, 3; bước 3 rẽ nhánh 3a hoặc 3b) | 5 (nhập yêu cầu, Rule lọc, AI đề xuất, duyệt, xuất) | Thêm 1 bước duyệt (HITL); 3 bước chuyển từ làm tay sang Rule hoặc AI |
 | Tổng thời gian | 63–75 phút/đề (ví dụ bấm giờ); survey: trung vị 1–2 giờ/đề | 11–19 phút/đề | Số "sau" là kỳ vọng; target ≤ 30' tính cả thời gian duyệt |
-| Số bước thủ công | 5 | 2 (nhập yêu cầu, duyệt) | Gia sư vẫn quyết định cuối |
+| Số bước thủ công | 4 | 2 (nhập yêu cầu, duyệt) | Gia sư vẫn quyết định cuối |
 | Bottleneck chính | Bước 1: tìm và chọn câu (30') | Bước duyệt của gia sư (5–8') | Chuyển từ tìm kiếm sang kiểm tra |
 | Rủi ro mới phát sinh | Dùng lại đề cũ khi không kịp | Đáp án sai hoặc câu không hợp bài học lọt ra; học sinh hỏi lộ câu của đề đang giao | Giảm bằng bước duyệt, cờ câu đã dùng và khóa câu trong đề đang giao |
 
@@ -285,7 +285,7 @@ Vì sao:
 | **Quy trình** | Gia sư nhập yêu cầu bằng ngôn ngữ tự nhiên → Rule loại câu đã gắn cờ và áp template cấu trúc đề → AI đề xuất câu từ ngân hàng (thiếu thì soạn thêm, gắn nhãn "AI soạn") và tự kiểm theo 5 tiêu chí → **gia sư duyệt (HITL)** → Rule xuất đề để in hoặc nhập online và gắn cờ câu đã dùng. Thay cho 1a, 1b, 2 và 3 thủ công ở v0 |
 | **Bottleneck** | Bước 1 (1a + 1b, 30'/đề trong ví dụ bấm giờ): tìm và đánh giá từng câu có hợp bài học hay không. Survey: 4/7 người chưa có ngân hàng câu hỏi nói đây là bước tốn nhất |
 | **Impact** | Survey: 7 người chưa có ngân hàng câu hỏi mỗi người mất khoảng 2 đến hơn 20 giờ/tháng cho việc soạn đề (4–20 đề/tháng × 30'–2h+/đề; trung vị 1–2 giờ/đề); 6/10 người đã phải dùng lại đề cũ trong tháng này vì không kịp |
-| **Success Metric** (baseline → target, cách đo) | (1) Tổng thời gian soạn mỗi đề **tính cả thời gian duyệt**: trung vị 1–2 giờ (survey), 63–75' (bấm giờ) → ≤ 30'. (2) Tỉ lệ câu gia sư phải sửa hoặc thay ≤ 30%. (3) Số lần dùng lại đề cũ vì không kịp: 6/10 người trong tháng → giảm một nửa. Cách đo: bấm giờ riêng phần tạo và phần duyệt mỗi đề trong 4 tuần pilot; đếm câu bị sửa/thay; hỏi lại câu 5 của survey sau pilot |
+| **Success Metric** (baseline → target, cách đo) | (1) Tổng thời gian soạn mỗi đề **tính cả thời gian duyệt**: trung vị 1–2 giờ (survey), 63–75' (bấm giờ) → ≤ 30'. (2) Tỉ lệ câu gia sư phải sửa hoặc thay ≤ 30%. (3) Số lần phải dùng lại đề cũ vì không kịp: baseline 5/7 người chưa có ngân hàng câu hỏi đã phải dùng lại trong tháng (survey) → 0 lần trong 4 tuần pilot. Cách đo: trong pilot 4 tuần (ít nhất 10 đề), bấm giờ riêng phần tạo và phần duyệt mỗi đề; đếm câu bị sửa/thay; gia sư ghi lại mỗi lần phải dùng lại đề cũ |
 | **Boundary** | AI không tự đưa đề cho học sinh; không dùng lại câu đã gắn cờ cho cùng nhóm học sinh; không đưa đáp án chưa qua kiểm tra; không làm việc trực tiếp với học sinh. Gia sư duyệt từng câu và đáp án trước khi in hoặc upload và chịu trách nhiệm cuối cùng về nội dung đề |
 | **AI intervention point** | Chỉ bước chọn câu hợp bài học (1b): AI nhận yêu cầu (chủ đề, độ khó, cấu trúc đề), đề xuất câu từ ngân hàng, soạn thêm khi thiếu, tự kiểm theo 5 tiêu chí rồi trình bản nháp. Lọc, template và xuất đề do Rule làm |
 | **Mức chọn** | **Workflow.** Vì sao không chọn mức đơn giản hơn: Rule chỉ lọc theo nhãn, không hiểu yêu cầu bằng ngôn ngữ tự nhiên và "hợp bài học"; No AI (ngân hàng câu hỏi, SmartTest) có thể đủ cho người đã có ngân hàng nhưng chưa giải được bước chọn câu cho người chưa có — cần kiểm chứng. Vì sao không lên Agent: các nhánh (thiếu câu, trùng câu, đổi yêu cầu) đều biết trước, không cần AI tự quyết bước |
@@ -306,7 +306,7 @@ Vì sao:
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | Đáp án đúng | Đáp án của mọi câu được gia sư đối chiếu đều đúng; tối thiểu 95% câu có đáp án đúng ngay từ bản nháp của AI (kiểm trên 10 đề) | Có đáp án sai lọt qua bước duyệt, hoặc dưới 95% câu đúng ngay từ bản nháp |
+| 1 | Đáp án đúng | Đáp án của mọi câu được gia sư đối chiếu đều đúng; tối thiểu 95% câu có đáp án đúng ngay từ bản nháp của AI (kiểm trên ít nhất 10 đề trong pilot 4 tuần) | Có đáp án sai lọt qua bước duyệt, hoặc dưới 95% câu đúng ngay từ bản nháp |
 | 2 | Hợp yêu cầu | Tối thiểu 90% câu đúng chủ đề và độ khó gia sư yêu cầu; đúng cấu trúc đề (đủ số câu mỗi phần) | Có câu lạc chủ đề, sai độ khó nghiêm trọng, hoặc thiếu phần của cấu trúc đề |
 | 3 | Không trùng đề | 0 câu trùng với câu đã gắn cờ cho cùng nhóm học sinh | Có câu trùng với đề đã giao cho cùng nhóm |
 | 4 | Công thức hiển thị đúng | Công thức toán hiển thị đúng ở cả bản in và bản online | Công thức bị lỗi, mất ký hiệu hoặc phải gõ lại |
@@ -335,7 +335,7 @@ Vì sao:
 - Vì một rủi ro Cao có thể giảm bằng kiểm chứng và một bước chuẩn bị nhỏ (dựng ngân hàng cho 1 chủ đề), quyết định là Not Yet chứ không phải No-Go.
 - Chi phí kiểm chứng thấp hơn nhiều so với chi phí xây.
 
-**Nếu Go — pilot nhỏ nhất:** một gia sư chưa có ngân hàng câu hỏi dùng Workflow chạy bằng prompt thủ công trên ngân hàng nhỏ (1 chủ đề, ~50 câu gắn nhãn), 5 đề liên tiếp; gia sư duyệt từng câu và đáp án, bấm giờ riêng phần tạo và phần duyệt, đếm số câu phải sửa.
+**Nếu Go — pilot nhỏ nhất:** một gia sư chưa có ngân hàng câu hỏi dùng Workflow chạy bằng prompt thủ công trên ngân hàng nhỏ (1 chủ đề, ~50 câu gắn nhãn), trong 4 tuần, ít nhất 10 đề; gia sư duyệt từng câu và đáp án, bấm giờ riêng phần tạo và phần duyệt, đếm số câu phải sửa.
 
 **Nếu Not Yet — cần kiểm chứng gì trước:**
 1. Phỏng vấn 3 người đã chọn ở mục 3.2 (rồi mở rộng lên 5) theo bộ câu hỏi CP4, đặc biệt người có ngân hàng câu hỏi, để biết phương án No AI có đủ không.
