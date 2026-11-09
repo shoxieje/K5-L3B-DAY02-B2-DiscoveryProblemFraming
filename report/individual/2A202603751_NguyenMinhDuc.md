@@ -51,10 +51,10 @@ Bối cảnh: tôi là gia sư dạy toán, dạy nhiều học sinh, phần l�
 | Job Story | Khi đến lớp cần cho học sinh ôn tập, tôi muốn có sẵn một đề đúng cấu trúc quen thuộc với các câu hỏi đã chọn, để không phải mất hơn một giờ tìm câu hỏi và tổng hợp lại cho mỗi đề |
 | Actor | Giáo viên và gia sư soạn đề ôn tập cho học sinh |
 | Thời điểm / bối cảnh | Mỗi buổi học hằng ngày, trước khi vào lớp; cấu trúc đề năm nào cũng giống nhau |
-| Quy trình hiện tại (3–7 bước) | 1. Tìm đề thi trên mạng và chọn các câu hỏi phù hợp (30') · 2. Tổng hợp thành đề: copy về và gõ tay lại trên Word (30') · 3a. Nhập đề lên trang online (15') hoặc 3b. In ra phiếu để học sinh làm (3–5') |
-| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 1: tìm đề trên mạng và chọn câu hỏi phù hợp, mất 30 phút/đề. Bước 2 (tổng hợp thành đề) cũng mất 30 phút nhưng tôi coi bước 1 là bottleneck chính. |
+| Quy trình hiện tại (3–7 bước) | 1a. Tìm đề thi trên mạng 15p. Chọn các câu hỏi phù hợp với bài học từ các đề tìm được 15p · 2. Tổng hợp thành đề: copy về và gõ tay lại trên Word (30') · 3a. Nhập đề lên trang online (15') hoặc 3b. In ra phiếu để học sinh làm (3–5') |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 1 mất 30 phút/đề. Bước 2 cũng mất 30 phút nhưng tôi coi bước 1 là bottleneck chính vì bước 1b đòi hỏi tôi phải đánh giá từng câu có hợp bài học hay không, việc này không thể làm máy móc bằng template.|
 | Impact (nếu không giải thì sao) | Khoảng 63–75 phút/đề (cộng các bước; ước tính ban đầu là 1–2 giờ); 3–5 đề/tuần, tức khoảng 3–6 giờ/tuần cho mỗi giáo viên hoặc gia sư. Khi soạn không kịp, tôi dùng lại đề cũ có sẵn trên mạng thay vì soạn đề mới. Hậu quả: học sinh đã làm đề đó rồi và đề không sát bài học. |
-| Success metric (baseline → target) | Baseline: 63–75 phút/đề. Target: 15–20 phút/đề. Cách đo: <!-- TODO: bấm giờ vài lần soạn đề --> |
+| Success metric (baseline → target) | Baseline: 63–75 phút/đề. Target: 15–20 phút/đề. |
 | Phương án không dùng AI | Làm sẵn template Word theo cấu trúc đề cố định và ngân hàng câu hỏi phân loại theo chủ đề, mỗi lần chỉ chọn câu bỏ vào template. Giảm thời gian gõ lại, chưa giải quyết việc tìm câu hỏi. |
 | Giả thuyết về AI (nếu có) | AI soạn đề theo cấu trúc quen thuộc từ yêu cầu của giáo viên; giáo viên kiểm tra và chỉnh trước khi in hoặc upload |
 | Cảm nhận nhanh | Chưa biết |
@@ -64,7 +64,8 @@ Quy trình nháp hiện tại:
 ```text
 HIỆN TẠI — 63–75 phút/đề (3–5 đề/tuần)
 
-[1 Tìm đề trên mạng + chọn câu hỏi: 30'] ← BOTTLENECK
+[1a Tìm đề trên mạng: __']  ┐ ← BOTTLENECK (1a + 1b = 30')
+→ [1b Chọn câu hỏi phù hợp bài học: __'] ┘
 → [2 Tổng hợp thành đề: copy, gõ tay lại trên Word: 30']
 → [3a Nhập đề lên trang online: 15']
    hoặc
@@ -150,12 +151,11 @@ Phản biện Card #1 do AI đóng vai PM hoài nghi thực hiện. Cột "Đồ
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
+| Pitch Problem Card | Pitch Card #1 (soạn đề ôn tập) cho nhóm | Nhóm chọn Card #1 của tôi làm candidate problem |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: (1) Với bài của bạn Quang: AI agent có thật sự cần thiết không, khi hiện nay đã có tool ghi vào sheet cho các AI agent như Claude hay ChatGPT? (2) Với bài của bạn Quang còn lại (nhóm có 2 bạn tên Quang): khó khăn lớn nhất khi kết nối vào các nguồn thông tin để agent có thể đọc được là gì? | |
+| Nhận phản biện | Câu hỏi tôi nhận được: nếu agent này cho mọi người sử dụng thì nếu cùng 1 ngân hàng câu hỏi thì có thể học sinh sẽ biết trước đề thì sao | Tôi đã sửa gì: (1) Đề xuất khóa agent, hoặc ngăn học sinh hỏi các câu trong đề, khi đề đang được giao hoặc học sinh đang làm bài. (2) Sau khi cân nhắc thêm, bổ sung việc đánh flag các câu hỏi trong ngân hàng khi chúng được dùng trong một đề (ghi nhóm học sinh đã dùng, ngày dùng, loại đề), để không dùng lại nhầm câu cho cùng nhóm học sinh. |
+| Chọn candidate problem | Card #1 của tôi được nhóm chọn | Cả nhóm làm tiếp CP4 đến CP6 với bài soạn đề; kiểm chứng bắt đầu bằng bộ câu hỏi phỏng vấn và survey cho Card #1 <!-- TODO: ghi lý do nhóm chọn và vì sao loại các card khác --> |
+| Kiểm chứng / research | (1) Research: tìm các bài thảo luận về khó khăn khi soạn đề thi và tìm hiểu công cụ SmartTest (smarttest.vn) xem có giải bài giống Card #1 và Card #3 không. (2) Chuẩn bị kiểm chứng: soạn bộ câu hỏi phỏng vấn (12 câu) và survey (7 câu) cho Card #1 theo Mom Test, tôi đã đọc lại và thấy phù hợp (có nhờ AI hỗ trợ, ghi ở mục 5) | Research cho thấy đã có công cụ trùng một phần với Card #1 (SmartTest có ngân hàng câu hỏi, dựng đề và tính năng AI tạo đề), nên cần xác định khoảng trống thật trước khi chọn mức can thiệp. Bộ câu hỏi này để nhóm dùng khi phỏng vấn và survey |
 | Quy trình nhóm | | |
 | Problem Statement | | |
 | Mức can thiệp AI | | |
@@ -169,7 +169,8 @@ Phản biện Card #1 do AI đóng vai PM hoài nghi thực hiện. Cột "Đồ
 |---|---|---|---|---|
 | CP1 Scan | Tự viết 4 problem trước. Sau đó nhờ AI viết lại thành Job Story, tính tổng thời gian, và gợi ý ý thứ 5 vì tôi hết ý | Nhắc tôi còn thiếu lăng kính "Pain từ người khác"; gợi ý ý A (phụ huynh hỏi lại qua Zalo) mà tôi thật sự gặp | AI gợi ý 6 tình huống dựa trên việc đoán nghề gia sư, không biết tôi có gặp thật không <!-- TODO: bổ sung chỗ AI sai/hời hợt khác nếu có --> | Chỉ giữ ý A vì đúng thực tế; bỏ 5 ý còn lại; điền lại dấu hiệu thật bằng số của mình |
 | CP2 Problem Card | Nhờ AI dựng khung Problem Card #1 từ lời kể của tôi, đề xuất phương án không dùng AI; giao một subagent AI đóng vai PM hoài nghi phản biện Card #1 (6 điểm yếu, xem bảng ở mục 3) | Chuyển ý "nhờ AI soạn đề" từ Job Story xuống ô giả thuyết về AI; đề xuất template Word + ngân hàng câu hỏi theo chủ đề | AI gộp "tìm đề" và "chọn câu" thành một bước khi tôi chưa nói rõ | Giữ phương án không dùng AI sau khi tự xem lại; tự chọn bước 1 làm bottleneck, tự đặt target 15–20 phút/đề |
-| CP4 Research | | | | |
+| CP4 Research | (1) Nhờ AI tìm trên mạng các bài thảo luận về khó khăn khi soạn đề thi (tiếng Việt và tiếng Anh, gồm cả gia sư toán). (2) Nhờ AI đọc trang smarttest.vn xem có giải bài giống Card #1 và Card #3 không | (1) Tìm được nguồn về việc giáo viên phải soạn nhiều đề và đề xuất ngân hàng câu hỏi dùng chung (Giáo dục Online), cùng khảo sát nước ngoài cho thấy phần lớn giáo viên tự tạo bài đánh giá và nói tốn thời gian (Instructure, GL Assessment). (2) Biết SmartTest có ngân hàng câu hỏi theo ma trận, dựng đề, trộn đề, nhập câu từ Word và có tính năng AI tạo đề, trùng khá nhiều với Card #1 | (1) Chưa có nguồn nào nói riêng về gia sư toán soạn đề mất bao lâu; một số khảo sát do hãng công nghệ tài trợ nên có thể thiên lệch; AI tóm tắt từ kết quả tìm kiếm, chưa mở từng link. |
+| CP4 Kiểm chứng (survey) | Nhờ AI viết bộ câu hỏi phỏng vấn và survey cho Card #1 (soạn đề) theo Mom Test | Có sẵn kịch bản 12 câu phỏng vấn và 7 câu survey hỏi về hành vi đã xảy ra, kèm cách ghi nhận | Sau khi đọc lại, tôi thấy các câu hỏi phù hợp với bối cảnh của tôi và chưa phát hiện chỗ sai. Chưa dùng thật nên chưa biết câu nào kém hiệu quả khi hỏi | Chưa sửa câu nào; dự định dùng toàn bộ câu hỏi khi phỏng vấn và survey thật |
 | CP5 Quy trình | | | | |
 | CP5–6 Problem Statement | | | | |
 | CP6 Mức can thiệp / quyết định | | | | |
@@ -178,24 +179,57 @@ Phản biện Card #1 do AI đóng vai PM hoài nghi thực hiện. Cột "Đồ
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
+Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5).
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Giúp tôi hiểu hơn là trong cuộc sống còn nhiều vấn đề có thể đưa AI vào, các problems của các bạn rất đa dạng từ công việc tới đời sống.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+Nhóm có tôi thấy nhóm có đề xuất đề tài AI tổng hợp thông báo thông tin từ nhiều nguồn, nhưng chưa thật sự hiểu vấn đề AI có thật sự cần thiết không, áp dụng AI vào đây có thật sự khả thi không
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+Tôi có đổi ý và thay đổi cách tiếp nhận bài toán theo hướng khác, ví dụ tôi được hỏi là trên mạng đã có người tiếp cận thực hiện vấn đề này nhưng khi tạo đề thi người dùng phải điền form, thì tôi mong muốn triển khai giao diện chat để người dùng có thể tạo đề thi dưới dạng ngôn ngữ tự nhiên 
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+Có vì có những thầy giáo cô giáo có kinh nghiệm soạn đề rất nhanh, và khi hỏi có mong muốn áp dụng AI trong giáo dục không thì đang chia làm 2 luồng ý kiến có và không 
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
+Là tôi đang gặp vấn đề về việc đo các metric khi những số liệu chỉ là giả định, cần người thật để các metric được đa dạng hơn
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+Nếu làm lại tôi sẽ đổi cách tiếp cận ý tưởng, hỏi ý kiến người khác trước xem có thật sự gặp vấn đề không, không phải mỗi mình gặp vấn đề là có thể áp dụng AI solution, tôi sẽ phản biện mạnh hơn ở vấn đề là ý tưởng của tôi khác gì so với các giỉa pháp hiện có. 
 
-**6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+**6.7. Hiểu bài:** 
+- Problem: chỉ rõ ai đau, đau bao nhiêu, chưa nói đến giải pháp.
+- Quy trình: pain ở mức nào.
+- Metric: thành công được đo bằng gì, phải có tiêu chí, cách đo cho solution và baseline để xem sự kahsc biệt.
+- Boundary: AI không làm được gì khi nào cần người kiểm tra, AI không quyết định hết cần có động tay của con người.
+- Mức can thiệp AI: mức đơn giản nhất đủ dùng, triển khai solution với mức đủ dùng, so sánh từng mức ứng dụng AI để xem phương án nào phù hợp nhất.
+- Quyết định: Go, Not Yet hay No-Go: Chấm 4 rủi ro Value, Usability, Feasibility, Viability sau đó mới ra quyết định kèm ngưỡng dừng đo được
+   Value: có thật sự cần không (SmartTest đã tồn tại).
+   Usability: giáo viên dùng và sửa được đầu ra không.
+   Feasibility: có ngân hàng câu hỏi và công thức toán không.
+   Viability: chi phí, bản quyền, ai vận hành.
+   Ngưỡng dừng, dạng mẫu: "nếu sau X tuần mà thời gian chưa xuống dưới Y phút thì quay về template/SmartTest".
+.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+Nguồn research (mở và kiểm ngày 09/11/2026):
+
+1. SmartTest, trang chủ giới thiệu ngân hàng câu hỏi, tổ hợp đề theo ma trận, tạo nhiều mã đề hoán vị, nhập câu hỏi từ Word và tạo câu hỏi bằng AI: https://smarttest.vn
+2. Tạp chí điện tử Giáo dục Việt Nam (GDVN), "Ngân hàng câu hỏi dùng chung cho kiểm tra, đánh giá học sinh cần đảm bảo yếu tố nào?" (nói ngân hàng dùng chung giúp giảm thời gian và công sức giáo viên xây dựng câu hỏi, đề kiểm tra): https://giaoduc.net.vn/ngan-hang-cau-hoi-dung-chung-cho-kiem-tra-danh-gia-hoc-sinh-can-dam-bao-yeu-to-nao-post263154.gd
+3. eSchool News, "6 key trends shaping the future of K-12 assessment" (trích báo cáo *State of Assessment in K-12 Education* của Instructure: 84% giáo viên phải tự tạo bài đánh giá, hơn một nửa nói tốn quá nhiều thời gian; bài không nêu cỡ mẫu). Chưa mở được báo cáo gốc của Instructure, nên đây là nguồn thứ cấp và số liệu do hãng công nghệ giáo dục công bố: https://www.eschoolnews.com/district-management/2022/02/15/6-key-assessments-trends/
+4. GL Assessment, *Crunched by Numbers*, mục "Workload: teachers have their say" (khảo sát YouGov năm 2019 khoảng 800 giáo viên và lãnh đạo ở Anh: giáo viên dành trung bình 6 giờ 48 phút mỗi tuần cho kiểm tra và đánh giá; 75% nói trường yêu cầu họ điều phối và giám sát đánh giá). Khảo sát do đơn vị bán bài đánh giá tài trợ nên có thể thiên lệch, số liệu thuộc năm 2019: https://www.gl-assessment.co.uk/reports/workload/yougov-results/
+
+Framework và phương pháp (theo `docs/03-international-frameworks.md`, link đã mở được):
+
+5. Intercom, "How we accidentally invented Job Stories" (Job Story, CP1–CP2): https://www.intercom.com/blog/accidentally-invented-job-stories/
+6. Teresa Torres, "Opportunity Solution Trees" (Product Talk, CP3): https://www.producttalk.org/opportunity-solution-trees/
+7. Rob Fitzpatrick, *The Mom Test* (CP4): https://www.momtestbook.com/
+8. Google PAIR, *People + AI Guidebook*, chương "User Needs + Defining Success" (augment hay automate, CP6): https://pair.withgoogle.com/chapter/user-needs/
+9. Anthropic, "Building effective agents" (phân biệt Workflow và Agent, CP6): https://www.anthropic.com/research/building-effective-agents
+10. Marty Cagan, "The Four Big Risks" (SVPG, 4 rủi ro Value / Usability / Feasibility / Viability, CP6): https://www.svpg.com/four-big-risks/
