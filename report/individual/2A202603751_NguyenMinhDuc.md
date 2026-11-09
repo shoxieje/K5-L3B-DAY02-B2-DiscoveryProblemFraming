@@ -8,7 +8,7 @@
 - MSSV: 2A202603751
 - Email trường (không bắt buộc, repo có thể để public):
 - Tên nhóm: Nhom3
-- Link repo nhóm: https://github.com/shoxieje/K5-L3B-DAY02-Nhom3-DiscoveryProblemFraming
+- Link repo nhóm: https://github.com/shoxieje/K5-L3B-DAY02-B2-DiscoveryProblemFraming
 
 ---
 
