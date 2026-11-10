@@ -91,8 +91,23 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
+- Pitch 3 Problem Cards ban đầu (Card #1 Git + chat, Card #2 deadline trên lớp, Card #3 đồ ăn tủ lạnh).
+- Người phản biện chính: đặt câu hỏi chất vấn cho Minh Đức (về nguồn câu hỏi và rủi ro bản quyền đề thi) và Ngọc Quang (về tính khả thi của giải pháp No-AI cho deadline).
+- Tham gia cùng nhóm gom cluster, xây dựng cây OST (Mục 2.2, 2.3), rà soát Problem Statement v0/v1 và phản biện mức can thiệp AI để chốt quyết định Not Yet.
+
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Pitch Candidate #1 và Candidate #2 ở CP3, bảo vệ bài toán kỹ thuật của dev trước khi nhóm thống nhất hội tụ theo dữ liệu thực nghiệm ngoài nhóm của Minh Đức.
+- Đặt câu hỏi phản biện cốt lõi cho Candidate #4: *"Ngân hàng câu hỏi lấy từ đâu, và có vướng vấn đề bản quyền đề thi không?"* (được ghi nhận tại Mục 2.1 của `group_report.md`), giúp nhóm nhận ra rủi ro Feasibility/Legal và đưa câu hỏi này vào Assumption Map (dòng 5).
+- Cùng nhóm xây dựng cây OST (Mục 2.3), phân định rạch ròi giữa Nhu cầu thực tế (Opportunity) và Giải pháp trá hình (gạch bỏ các ý "Trợ lý AI tự sinh đề", "App chat riêng cho dev").
+- Phản biện phương án Workflow vs Agent ở CP6: đồng thuận không chọn Agent vì rủi ro AI tự sinh câu hỏi sai đáp án, ủng hộ quyết định **Not Yet** vì giải pháp No-AI (SmartTest, ngân hàng câu hỏi phân loại sẵn) chưa được người dùng khai thác hết.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
+- `group_report.md`: Mục 2.1 (dòng pitch 1, 2, 3 và câu hỏi phản biện cho dòng 4, 7), Mục 2.2 (Cluster), Mục 2.3 (Cây OST), Mục 2.4 (Xử lý bất đồng), Mục 6–8 (Problem Statement và quyết định).
+- File cá nhân: `report/individual/2A202603760_PhamDangQuang.md`.
+
 **Điều mình học được từ phần nhóm:**
+
+- Mình học được cách từ bỏ góc nhìn cá nhân (dù rất tâm đắc với bài toán Git + Chat) để đồng thuận theo quyết định chung của nhóm khi ứng viên khác có bằng chứng định lượng mạnh hơn từ người dùng thực tế (survey 10 người).
+- Mình hiểu sâu sắc rằng trong Discovery & Problem Framing, một kết luận "Not Yet" hoặc "No AI" được lập luận chặt chẽ và có số liệu thực chứng đáng giá hơn rất nhiều so với việc cố tình ép AI vào một bài toán chưa rõ ràng về mặt dữ liệu.

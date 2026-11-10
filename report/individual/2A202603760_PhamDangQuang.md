@@ -153,12 +153,12 @@ HIỆN TẠI — 25 phút chuẩn bị
 | Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: Hỏi Minh Đức: "Nếu làm bài soạn đề ôn tập thì lấy dữ liệu câu hỏi ở đâu và bản quyền giải quyết thế nào?". Hỏi Ngọc Quang: "Nếu lớp trưởng lập Google Calendar chung ghim lên Discord thì đã giải quyết được việc theo dõi deadline chưa, có cần AI không?" | Giúp nhóm nhận ra bài của Minh Đức rủi ro bản quyền cao, còn bài của Ngọc Quang dùng No-AI (Rule/Lịch chung) là đủ giải quyết 80% |
 | Nhận phản biện | Câu hỏi tôi nhận được: Minh Đức hỏi: "Nếu dev commit code chưa chạy được hoặc chỉ lưu ở máy local thì sao biết tiến độ thật?". Ngọc Quang hỏi: "Làm sao tránh cảm giác bị soi mói, micromanagement khi bot đọc repo?" | Tôi đã sửa gì: Bổ sung nguồn đối chiếu cả tin nhắn chat lẫn commit diff; thiết lập Boundary nghiêm ngặt là không đo KPI cá nhân và luôn cần Tech Lead duyệt trước khi cập nhật task |
 | Gom cluster / cây OST | Cùng nhóm thảo luận gom 9 candidate thành 3 cụm: Phối hợp kỹ thuật nhóm, Xử lý tài liệu học tập, Đời sống cá nhân | Cùng thống nhất Outcome chung về giảm thời gian hành chính/đồng bộ thông tin của sinh viên |
-| Chọn candidate problem | Trình bày bảo vệ Candidate #1 dựa trên dữ liệu thật và độ vừa sức | Nhóm đồng thuận 100% chọn Candidate #1 với 34/35 điểm |
-| Kiểm chứng / research | Hỗ trợ Ngọc Quang xây dựng câu hỏi The Mom Test và cùng phân tích insight từ 3 bạn sinh viên được phỏng vấn | Phát hiện ra sự thật: Dev không lười làm mà chỉ lười gõ báo cáo hành chính; củng cố giả thuyết tự động đọc Git |
-| Quy trình nhóm | Trực tiếp vẽ sơ đồ quy trình Hiện tại & Tương lai (CP5), tính toán số phút cho từng bước | Chỉ ra đúng bottleneck mất 25 phút đọc commit diff; thiết kế luồng tương lai giảm còn 10 phút |
-| Problem Statement | Chắp bút bản Problem Statement v0 và v1; xác định rõ Boundary và AI intervention point | Tạo khung bài toán chặt chẽ, có tiêu chí eval rõ ràng |
-| Mức can thiệp AI | Thảo luận bảng so sánh 4 mức No AI / Rule / Workflow / Agent | Thống nhất chọn Workflow có HITL (Human-in-the-loop); bác bỏ mức Agent vì rủi ro mất kiểm soát |
-| Quyết định | Tham gia đánh giá 4 rủi ro và xác định điều kiện Kill switch (ngưỡng dừng) | Đưa ra quyết định Go kèm điều kiện dừng sau 2 tuần nếu tỷ lệ AI tóm tắt sai vượt 30% |
+| Chọn candidate problem | Ban đầu bảo vệ Candidate #1, sau đó đồng thuận chọn Candidate #4 (Soạn đề ôn tập) của Minh Đức | Nhóm chọn #4 vì có bằng chứng đo thật và survey 10 người ngoài nhóm |
+| Kiểm chứng / research | Hỗ trợ nhóm rà soát dữ liệu survey 10 người và phản biện tính pháp lý của nguồn câu hỏi | Đưa câu hỏi bản quyền vào Assumption map để kiểm chứng trước |
+| Quy trình nhóm | Rà soát quy trình trước/sau của bài toán soạn đề (CP5) | Đóng góp tách bước 1 thành 1a (tìm đề) và 1b (chọn câu hỏi) để đo chính xác bottleneck |
+| Problem Statement | Cùng nhóm hoàn thiện Problem Statement v0 và v1 | Xác định rõ Boundary: AI không tự ý sinh câu hỏi mới ngoài ngân hàng chuẩn |
+| Mức can thiệp AI | Thảo luận bảng so sánh 4 mức No AI / Rule / Workflow / Agent | Thống nhất chọn Workflow có nhánh rẽ; bác bỏ Agent vì rủi ro AI giải sai bài toán |
+| Quyết định | Tham gia đánh giá 4 rủi ro và xác định điều kiện Kill switch (ngưỡng dừng) | Đưa ra quyết định Not Yet vì phương án No-AI (SmartTest, ngân hàng câu hỏi) chưa được khai thác hết |
 
 ---
 
@@ -198,13 +198,13 @@ Khó nhất là viết phần **Boundary** và **Success Metric**. Khi viết me
 Nếu được làm lại từ đầu, tôi sẽ từ bỏ ý tưởng "xây app chat riêng" ngay từ phút đầu tiên để không mất thời gian mơ mộng về giải pháp cồng kềnh, mà tập trung vẽ quy trình chi tiết ngay từ CP1. Tôi cũng sẽ phản biện nhóm mạnh hơn trong việc chuẩn bị kịch bản phỏng vấn The Mom Test để có thể phỏng vấn được nhiều người hơn, đào sâu hơn vào các tình huống xử lý khi merge code xung đột.
 
 **6.7. Hiểu bài:**
-Chuỗi logic của bài toán nhóm tôi được xây dựng liền mạch như sau:
-1. **Problem:** Trưởng nhóm kỹ thuật mất trung bình 55 phút mỗi ngày vì phải tự mở từng branch Git và lội tin nhắn chat để nắm tiến độ thật do dev ngại viết báo cáo standup thủ công.
-2. **Quy trình:** Quy trình hiện tại gồm 4 bước thủ công với nút nghẽn (bottleneck) là bước soi commit diff và đối chiếu chéo với thảo luận chat (chiếm 25 phút).
-3. **Metric:** Thành công được đo lường bằng việc giảm thời gian tổng hợp từ 55 phút/ngày xuống $\le$ 10 phút/ngày, và rút ngắn độ trễ phát hiện blocker từ 2–3 ngày xuống ngay trong ngày.
-4. **Boundary:** Ranh giới nghiêm ngặt là AI không can thiệp vào quyền hạn dự án, không đánh giá KPI theo commit, và luôn có sự kiểm tra, phê duyệt của con người (Human-in-the-loop).
-5. **Mức can thiệp AI:** Chọn mức **Workflow** (tự động thu thập diff + chat $\rightarrow$ phân tích bằng LLM $\rightarrow$ xuất bản tóm tắt daily sync cho Lead duyệt), kiên quyết không chọn Agent tự hành vì rủi ro mất kiểm soát và gây ức chế cho dev.
-6. **Quyết định:** Ra quyết định **Go với phạm vi pilot nhỏ** (triển khai script GitHub Action + Discord Webhook trong 2 tuần), kèm **ngưỡng dừng** rõ ràng: nếu tỷ lệ tóm tắt sai vượt quá 30% hoặc thành viên cảm thấy bị soi mói, nhóm sẽ lập tức dừng dự án và quay về phương án họp standup truyền thống.
+Chuỗi logic của bài toán nhóm tôi chọn (Soạn đề ôn tập cho gia sư/giáo viên) được xây dựng liền mạch như sau:
+1. **Problem:** Giáo viên và gia sư mất từ 63–75 phút/đề (survey 10 người cho thấy mất từ 30 phút đến hơn 2 giờ) để soạn một đề ôn tập, chủ yếu nghẽn ở khâu tìm và chọn câu hỏi phù hợp khi chưa có ngân hàng câu hỏi gắn nhãn chuẩn.
+2. **Quy trình:** Hiện tại gồm 3 bước thủ công: tìm đề và chọn câu (30') $\rightarrow$ gõ lại Word (30') $\rightarrow$ đưa lên web thi (15') hoặc in phiếu (5'); nút nghẽn (bottleneck) chính nằm ở bước tìm và chọn câu hỏi.
+3. **Metric:** Thành công được đo lường bằng việc giảm thời gian soạn đề xuống $\le$ 20 phút/đề, thời gian duyệt $\le$ 5 phút/đề, đo lường bằng việc bấm giờ thực tế trong 4 tuần.
+4. **Boundary:** Ranh giới nghiêm ngặt là AI không tự sinh câu hỏi mới ngoài ngân hàng chuẩn, không tự ý đưa đề lên trang thi mà bắt buộc người dạy phải duyệt từng câu và đáp án (Human-in-the-loop).
+5. **Mức can thiệp AI:** Chọn mức **Workflow** có nhánh rẽ (lấy câu hỏi theo nhãn $\rightarrow$ xếp đề $\rightarrow$ người duyệt $\rightarrow$ xuất bản), kiên quyết không chọn Agent vì rủi ro AI giải sai đáp án toán học (hallucination).
+6. **Quyết định:** Ra quyết định **Not Yet** (chưa dùng AI ngay) vì giải pháp No-AI (phần mềm SmartTest hoặc ngân hàng câu hỏi chia theo chủ đề) chưa được người dùng khai thác hết; kèm **ngưỡng dừng** rõ ràng: nếu sau 4 tuần dùng thử SmartTest mà người dạy vẫn mất trên 45 phút/đề thì nhóm mới bắt đầu xây dựng giải pháp AI Workflow.
 
 ---
 
