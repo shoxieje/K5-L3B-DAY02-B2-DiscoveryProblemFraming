@@ -38,13 +38,13 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
-- Pitch Card #1 (soạn đề ôn tập); research giải pháp đã có (SmartTest); chuẩn bị bộ câu hỏi kiểm chứng cho Card #1; soạn bản nháp Problem Statement v0, v1 và bảng so sánh 4 mức can thiệp.
+- Pitch Card #1 (soạn đề ôn tập); research giải pháp đã có (SmartTest); chuẩn bị bộ câu hỏi kiểm chứng cho Card #1, tạo Google Form và chạy survey 10 người; soạn bản nháp Problem Statement v0, v1 và bảng so sánh 4 mức can thiệp.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
 - Pitch Card #1 (soạn đề ôn tập), được nhóm chọn làm candidate problem. Đã bấm giờ quy trình thật (63–75 phút/đề) và tách bottleneck bước 1 thành 1a (tìm đề) và 1b (chọn câu).
 - Phản biện bài của hai bạn Quang trong nhóm, và nhận câu hỏi "học sinh có thể biết trước đề" nên bổ sung cơ chế gắn cờ câu hỏi đã dùng cho từng nhóm học sinh vào Boundary.
-- Research SmartTest và các nguồn về việc giáo viên tự soạn đề; soạn bộ câu hỏi phỏng vấn (12 câu) và survey (7 câu) theo Mom Test.
+- Research SmartTest và các nguồn về việc giáo viên tự soạn đề; soạn bộ câu hỏi phỏng vấn (12 câu) và survey (7 câu) theo Mom Test; tạo Google Form và chạy survey 10 giáo viên/gia sư (09/11/2026).
 - Viết quy trình trước/sau và bảng before/after (mục 4), Problem Statement v0 (mục 5) và v1 (mục 7), mức can thiệp AI gồm ma trận, bảng so sánh 4 mức, AI Canvas và hai câu hỏi PAIR (mục 6), tiêu chí đánh giá (mục 7) và quyết định kèm ngưỡng dừng (mục 8) trong `group_report.md`, từ dữ liệu Card #1 và kết quả research. Phần soạn có dùng AI hỗ trợ (ghi ở mục 5 báo cáo cá nhân).
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):

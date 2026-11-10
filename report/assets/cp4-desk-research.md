@@ -15,12 +15,12 @@
 
 | Nguồn | Nội dung liên quan | Xác nhận / phản bác |
 |---|---|---|
-| RMIT — "Can Gen AI create learning questions better than a human?" https://www.rmit.edu.au/about/educational-ai/blog/can-gen-ai-create-learning-questions-better-than-a-human (tóm tắt nghiên cứu Elkins et al., 2024) | Thời gian viết quiz **gần như bằng nhau** giữa dùng AI và tự viết tay; câu do AI tạo tốt hơn khi prompt có cấu trúc sư phạm (Bloom) | **Phản bác** giả định "AI giảm mạnh thời gian". Lý do: thời gian chuyển sang khâu duyệt |
+| RMIT — "Can Gen AI create learning questions better than a human?" https://www.rmit.edu.au/about/educational-ai/blog/can-gen-ai-create-learning-questions-better-than-a-human (tóm tắt nghiên cứu Elkins et al., 2024) | Thời gian viết quiz trung bình **gần như bằng nhau** giữa dùng AI và tự viết tay; giáo viên ưa câu do AI tạo khi prompt có cấu trúc sư phạm (Bloom) hơn prompt chung chung | **Phản bác** giả định "AI giảm mạnh thời gian". Nguồn không nêu lý do; nhóm suy luận là thời gian chuyển sang khâu duyệt |
 | Chartered College — "How can we drive up quality standards in AI-generated teaching resources?" https://my.chartered.college/?p=37752 | Công cụ Aila phải thêm bước "AI judge" chấm chất lượng quiz cho sát với đánh giá của giáo viên chuyên môn | **Xác nhận** cần bước kiểm tra (HITL/eval) — khớp với Boundary của nhóm |
 | Quiz Design Task (arXiv 2205.01730) https://arxiv.org/pdf/2205.01730 | 10 giáo viên chọn/loại câu hỏi do 7 mô hình sinh tự động, kèm lý do loại | Pattern: AI đề xuất, giáo viên chọn — giống quy trình tương lai mục 4.2 |
 
 ## 3. Kết luận cho nhóm
 
 - **Pain:** survey nhóm và nguồn thứ cấp cùng cho thấy việc tìm/chọn/tạo câu tốn thời gian → giả định 1–2 được củng cố.
-- **Phản bác quan trọng:** (a) survey: cả 3 người có ngân hàng câu hỏi đều soạn dưới 1 giờ (2 người dưới 30'); (b) báo VN: thiếu ngân hàng câu hỏi và kỹ năng ra đề là nguyên nhân gốc; (c) nghiên cứu Elkins: AI không giảm rõ thời gian vì phải duyệt. Cả ba chỉ về một hướng: **phải so AI với phương án No AI (ngân hàng câu hỏi gắn nhãn) trước khi Go** → củng cố quyết định Not Yet.
+- **Phản bác quan trọng:** (a) survey: cả 3 người có ngân hàng câu hỏi đều soạn dưới 1 giờ (2 người dưới 30'); (b) báo VN: thiếu ngân hàng câu hỏi và kỹ năng ra đề là nguyên nhân gốc; (c) nghiên cứu Elkins (qua RMIT): AI không giảm rõ thời gian viết quiz (nhóm suy luận là do phải duyệt). Cả ba chỉ về một hướng: **phải so AI với phương án No AI (ngân hàng câu hỏi gắn nhãn) trước khi Go** → củng cố quyết định Not Yet.
 - **Metric cần sửa:** đo cả thời gian **duyệt** chứ không chỉ thời gian tạo đề; nếu thời gian duyệt ăn hết phần tiết kiệm thì AI không có giá trị.

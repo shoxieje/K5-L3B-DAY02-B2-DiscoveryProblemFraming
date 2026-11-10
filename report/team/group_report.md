@@ -32,9 +32,10 @@
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | #1 (Git+Chat sync), #7 (Deadline rải rác), #9 (Chốt lịch họp), #8 (Search hỏi đáp cũ), #2 (Bắt lịch dời trên lớp) | **Phối hợp & Quản lý thông tin trong nhóm công nghệ:** Đều giải quyết sự phân mảnh thông tin giữa các kênh chat phi cấu trúc (Discord/Zalo) và công cụ làm việc thực tế (Git, Calendar). Nỗi đau chung của sinh viên/dev khi làm project nhóm. |
-| B | #4 (Soạn đề thi), #6 (Tách câu hỏi PDF) | **Soạn và xử lý tài liệu giảng dạy:** người dạy mất thời gian tìm, chọn và chuyển câu hỏi từ nhiều nguồn (đề trên mạng, PDF, đề cũ) thành đề dùng được. |
-| C | #3 (Nguyên liệu tủ lạnh), #5 (Ghi chép chi tiêu) | **Tối ưu hoá sinh hoạt cá nhân:** Quản lý tài nguyên cá nhân (tiền bạc, thực phẩm), thường bị tắc ở khâu lười nhập liệu đầu vào. |
+| A | #4 (Soạn đề thi), #6 (Tách câu hỏi PDF) | **Soạn và xử lý tài liệu giảng dạy:** người dạy mất thời gian tìm, chọn và chuyển câu hỏi từ nhiều nguồn (đề trên mạng, PDF, đề cũ) thành đề dùng được. |
+| B | #1 (Git+Chat sync), #9 (Chốt lịch họp) | **Điều phối thành viên trong nhóm:** trưởng nhóm mất thời gian nắm tiến độ thật hoặc chốt lịch chung, phải đối chiếu nhiều nguồn hoặc nhắn tin qua lại. |
+| C | #7 (Deadline rải rác), #8 (Search hỏi đáp cũ), #2 (Bắt lịch dời trên lớp) | **Thông tin quan trọng nằm lẫn trong nhiều kênh:** deadline, câu trả lời cũ, lịch dời nằm rải rác giữa kênh chat phi cấu trúc (Discord/Zalo), LMS và lời nói trên lớp nên người học dễ bỏ sót. |
+| D | #3 (Nguyên liệu tủ lạnh), #5 (Ghi chép chi tiêu) | **Tối ưu hoá sinh hoạt cá nhân:** quản lý tiền bạc, thực phẩm, thường bị tắc ở khâu lười nhập liệu đầu vào. Cluster này nằm ngoài outcome của cây OST nên không đưa vào cây (mục 2.3). |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
@@ -42,11 +43,13 @@ Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không ph
 
 ```text
 OUTCOME: Giảm thời gian người dạy và người học mất cho việc tìm, lọc và tổng hợp thông tin rải rác
-├── Opportunity A: Gia sư/giáo viên mất 30'–2h mỗi đề để tìm và chọn câu hỏi hợp bài học (#4, #6)
+├── Opportunity A (cluster A): Gia sư/giáo viên mất 30'–2h mỗi đề để tìm và chọn câu hỏi hợp bài học (#4, #6)
 │     └── Sub: khi gấp thì dùng lại đề cũ, học sinh có thể đã làm rồi
-├── Opportunity B: Trưởng nhóm không biết tiến độ thật của thành viên, phải tự đối chiếu Git với chat (#1)
-└── Opportunity C: Học viên bỏ sót thông tin (deadline, câu trả lời cũ) vì nằm lẫn trong nhiều kênh chat (#7, #8, #2)
+├── Opportunity B (cluster B): Trưởng nhóm mất thời gian nắm tiến độ thật và chốt lịch với thành viên, phải tự đối chiếu Git với chat hoặc nhắn qua lại (#1, #9)
+└── Opportunity C (cluster C): Học viên bỏ sót thông tin (deadline, câu trả lời cũ, lịch dời) vì nằm lẫn trong nhiều kênh (#7, #8, #2)
 ```
+
+Cluster D (#3, #5: tủ lạnh, chi tiêu cá nhân) không đưa vào cây vì không thuộc outcome "tìm, lọc, tổng hợp thông tin rải rác cho người dạy và người học".
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
@@ -126,23 +129,23 @@ Tổng hợp:
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
 | Survey Google Form | 10 | 4/10 mất từ 1 giờ trở lên mỗi đề; 5/10 nói bước tìm và chọn câu tốn nhất; 6/10 đã phải dùng lại đề cũ trong tháng này | 6/10 mất dưới 1 giờ, nên baseline 63–75' của Minh Đức cao hơn số đông; 5/10 có bottleneck khác (kiểm tra đáp án, gõ lại, đưa lên hệ thống); **3 người có ngân hàng câu hỏi: 2 người dưới 30', 1 người 30–60', không ai mất từ 1 giờ trở lên** (so với 4/7 người chưa có ngân hàng), gợi ý phương án No AI (ngân hàng câu hỏi) có thể đã đủ; gia sư Toán online duy nhất mất trên 2 giờ nhưng bottleneck là gõ lại/dựng đề chứ không phải chọn câu; 1 người đã tự dùng AI |
-| Desk research (khảo sát Tennessee 2019, 3 bài Giáo dục Việt Nam, RMIT/Elkins 2024, Chartered College, arXiv Quiz Design Task) | 7 nguồn | ~70% giáo viên dành >4 giờ/tuần tạo/tìm tài liệu; báo VN: ra đề tốn công, ngân hàng câu hỏi còn ít | Elkins 2024: thời gian viết quiz bằng AI ≈ tự viết vì phải duyệt; báo VN: nguyên nhân gốc là thiếu ngân hàng câu hỏi và kỹ năng ra đề (giải được bằng No AI) |
+| Desk research (khảo sát Tennessee 2019, 3 bài Giáo dục Việt Nam, RMIT/Elkins 2024, Chartered College, arXiv Quiz Design Task) | 7 nguồn | ~70% giáo viên dành >4 giờ/tuần tạo/tìm tài liệu; báo VN: ra đề tốn công, ngân hàng câu hỏi còn ít | Elkins 2024 (qua RMIT): thời gian trung bình viết quiz gần như bằng nhau giữa dùng AI và tự viết tay (nguồn không nêu lý do; nhóm suy luận là do thời gian chuyển sang khâu duyệt); báo VN: nguyên nhân gốc là thiếu ngân hàng câu hỏi và kỹ năng ra đề (giải được bằng No AI) |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
 - Thu hẹp actor: gia sư/giáo viên **chưa có ngân hàng câu hỏi gắn nhãn** và soạn đề theo bài học riêng, vì cả 3 người có ngân hàng câu hỏi đều soạn dưới 1 giờ. Không giới hạn ở môn Toán online nữa (survey có 6 môn).
 - Baseline dùng số của survey: trong 7 người chưa có ngân hàng câu hỏi, 3 người 30–60', 3 người 1–2 giờ, 1 người trên 2 giờ (trung vị nằm ở khoảng 1–2 giờ/đề). Quy trình bấm giờ 63–75' của Minh Đức giữ làm ví dụ chi tiết từng bước ở mục 4.1.
 - Ghi nhận bottleneck không giống nhau: 4/7 người chưa có ngân hàng nói tốn nhất là tìm và chọn câu, 2/7 là gõ lại/dựng đề. Giải pháp tập trung vào chọn câu; gõ lại/dựng đề xử lý bằng template (No AI).
 - Bổ sung "kiểm tra đáp án" là bước phải giữ cho con người (2/10 coi là bước tốn nhất, và đây là chỗ AI dễ sai nhất).
-- Success metric phải đo cả **thời gian duyệt** đầu ra AI, không chỉ thời gian tạo đề (theo nghiên cứu Elkins 2024: thời gian tiết kiệm bị dồn sang khâu duyệt).
+- Success metric phải đo cả **thời gian duyệt** đầu ra AI, không chỉ thời gian tạo đề (Elkins 2024: thời gian viết quiz bằng AI gần bằng tự viết; nhóm suy luận thời gian bị dồn sang khâu duyệt).
 - Kết quả "người có ngân hàng câu hỏi nhanh hơn" là lý do chính để quyết định **Not Yet**: cần so AI với phương án No AI trước.
 
 ### 3.3. Research giải pháp đã có
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| SmartTest | https://smarttest.vn | Bước 1b (chọn câu theo ma trận) và bước 2 (tổ hợp đề, trộn đề) | Có sẵn ngân hàng câu hỏi cho **nhiều môn cấp 3**; tổ hợp đề theo ma trận; **cho phép thay đổi trọng số (điểm) từng câu/phần trong bài thi**; có tính năng "Tạo đề với AI" (trang chủ smarttest.vn; ghi chú trên lớp) | Chưa rõ có chọn câu "hợp bài học" theo yêu cầu tự do của gia sư không, hay chỉ lọc theo nhãn có sẵn; chưa kiểm tra gắn cờ câu đã dùng cho từng nhóm học sinh; nhắm trường cấp 3, có thể không hợp gia sư cá nhân | Đối thủ đã che phần lớn quy trình → phải dùng thử SmartTest với một chủ đề trước khi kết luận có khoảng trống cho AI (lý do Not Yet) |
+| SmartTest | https://smarttest.vn | Bước 1b (chọn câu theo ma trận) và bước 2 (tổ hợp đề, trộn đề) | Trang chủ (mở lại ngày 10/11/2026) mô tả: quản lý ngân hàng câu hỏi và ma trận, nhập câu hỏi từ Word, tạo nhiều mã đề hoán vị, và "Tạo đề với AI" theo ma trận và chương trình GDPT 2018. Ghi chú trên lớp (chưa tự kiểm): có sẵn ngân hàng câu hỏi cho **nhiều môn cấp 3**; **cho phép thay đổi trọng số (điểm) từng câu/phần trong bài thi** | Trang chủ không nói có sẵn ngân hàng câu hỏi: người dùng tự nhập câu hỏi hoặc dùng học liệu mình có quyền khai thác; chưa rõ có chọn câu "hợp bài học" theo yêu cầu tự do của gia sư không, hay chỉ lọc theo nhãn có sẵn; chưa kiểm tra gắn cờ câu đã dùng cho từng nhóm học sinh; nhắm trường học nên có thể không hợp gia sư cá nhân; **nhóm chưa dùng thử** | Đã có "Tạo đề với AI" nên khoảng trống cho AI có thể hẹp hơn dự kiến → phải dùng thử SmartTest với một chủ đề trước khi kết luận (lý do Not Yet) |
 | Ngân hàng câu hỏi dùng chung (Tạp chí Giáo dục Việt Nam) | https://giaoduc.net.vn/ngan-hang-cau-hoi-dung-chung-cho-kiem-tra-danh-gia-hoc-sinh-can-dam-bao-yeu-to-nao-post263154.gd | Bước 1a–1b (nguồn câu hỏi) | Mô hình ngân hàng câu hỏi dùng chung cho kiểm tra, đánh giá; nêu các yêu cầu để ngân hàng dùng được (chuẩn hóa, gắn với yêu cầu cần đạt) | Xây và duy trì ngân hàng tốn nhiều công; câu hỏi dùng chung dễ bị học sinh biết trước | Ngân hàng câu hỏi gắn nhãn là phương án No AI mạnh nhất và cũng là **input bắt buộc** nếu dùng AI → phải dựng ngân hàng nhỏ trước khi pilot |
-| AI tạo câu hỏi quiz — nghiên cứu Elkins et al. 2024 (tóm tắt của RMIT) | https://www.rmit.edu.au/about/educational-ai/blog/can-gen-ai-create-learning-questions-better-than-a-human | Bước 1b (chọn/soạn câu) | Câu do AI tạo được đánh giá tốt hơn khi prompt có cấu trúc sư phạm (thang Bloom) | Thời gian viết quiz bằng AI gần như bằng tự viết, vì thời gian chuyển sang khâu duyệt | Metric phải đo **cả thời gian duyệt**; AI chỉ có giá trị nếu tổng thời gian (tạo + duyệt) giảm rõ |
+| AI tạo câu hỏi quiz — nghiên cứu Elkins et al. 2024 (tóm tắt của RMIT) | https://www.rmit.edu.au/about/educational-ai/blog/can-gen-ai-create-learning-questions-better-than-a-human | Bước 1b (chọn/soạn câu) | Câu do AI tạo được giáo viên ưa hơn khi prompt có cấu trúc sư phạm (thang Bloom) | Theo nguồn, thời gian trung bình viết quiz gần như bằng nhau giữa dùng AI và tự viết tay; nguồn không nêu lý do (nhóm suy luận: thời gian chuyển sang khâu duyệt) | Metric phải đo **cả thời gian duyệt**; AI chỉ có giá trị nếu tổng thời gian (tạo + duyệt) giảm rõ |
 | Aila — công cụ AI soạn tài liệu có bước "AI judge" (Chartered College) | https://my.chartered.college/?p=37752 | Bước kiểm tra chất lượng trước khi giáo viên duyệt | Thêm bước tự chấm chất lượng quiz, kết quả sát hơn với đánh giá của giáo viên chuyên môn | Vẫn cần giáo viên duyệt cuối; chất lượng phụ thuộc bộ tiêu chí chấm | Đưa 5 tiêu chí đánh giá ở mục 7 thành bước tự kiểm của AI trước khi trình gia sư |
 
 ---
@@ -254,7 +257,7 @@ Vì sao:
 **Mức chọn:** **Workflow** có người duyệt (human-in-the-loop). Rule lo phần lọc, template và xuất đề; AI chỉ làm bước đề xuất/soạn câu và tự kiểm theo tiêu chí; gia sư duyệt và chịu trách nhiệm cuối cùng.
 
 **Vì sao không chọn mức đơn giản hơn:**
-- **So với No AI (SmartTest, template):** các công cụ này đã có ngân hàng câu hỏi, tổ hợp đề theo ma trận và trộn đề, nhưng đều yêu cầu gia sư tự chọn câu hoặc điền điều kiện lọc. Khoảng trống còn lại là bước 1b (chọn câu hợp bài học) và việc tự đánh giá lại đề trước khi duyệt.
+- **So với No AI (SmartTest, template):** các công cụ này cho quản lý ngân hàng câu hỏi, tổ hợp đề theo ma trận và trộn đề (SmartTest còn có "Tạo đề với AI", nhóm chưa dùng thử nên chưa biết giải được đến đâu bước chọn câu). Với ngân hàng tự dựng, gia sư vẫn phải tự chọn câu hoặc điền điều kiện lọc. Khoảng trống còn lại là bước 1b (chọn câu hợp bài học) và việc tự đánh giá lại đề trước khi duyệt; đây là giả định cần kiểm chứng bằng cách dùng thử SmartTest.
 - **So với Rule:** tag và điều kiện lọc chỉ chọn được câu đã gắn nhãn; yêu cầu bằng ngôn ngữ tự nhiên và "hợp bài học" nằm ngoài tag nên Rule không đủ.
 - **Vì sao không lên Agent:** bản nháp đầu của nhóm chọn Agent vì nghĩ số bước thay đổi theo từng yêu cầu. Khi phản biện lại (Ngọc Quang), nhóm thấy ba tình huống "ngân hàng thiếu câu", "câu trùng", "gia sư đổi yêu cầu" đều biết trước và viết được thành nhánh rẽ cố định (mục 4.2). Agent chỉ cần khi không biết trước bước tiếp theo; ở đây thêm quyền tự quyết chỉ làm tăng rủi ro đáp án sai, chi phí và độ khó kiểm tra.
 - Đây là giả định thiết kế, chưa kiểm chứng bằng người dùng; nếu kiểm chứng cho thấy ngân hàng câu hỏi (No AI) hoặc SmartTest đã đủ thì quay về mức đó (xem ngưỡng dừng ở mục 8).
@@ -298,7 +301,7 @@ Vì sao:
 | Quy trình | 4 bước làm tay (1a, 1b, 2, 3) | Nhập yêu cầu → Rule → AI → gia sư duyệt → xuất đề | Chỉ ra bước nào Rule, AI hoặc con người làm, để thấy AI chen vào đâu |
 | AI intervention point | Chưa có | AI tìm, chọn, soạn thêm và tự kiểm tra câu ở bước 1b | v1 là phiên bản có AI; cần nêu rõ điểm can thiệp |
 | Actor | Gia sư toán dạy online (dữ liệu của 1 người) | Gia sư/giáo viên chưa có ngân hàng câu hỏi gắn nhãn, nhiều môn | Survey: 3 người có ngân hàng câu hỏi đều soạn dưới 1 giờ; 4/7 người chưa có mất từ 1 giờ trở lên; survey có 6 môn chứ không riêng Toán |
-| Success Metric | Baseline 63–75' → 15–20', chỉ đo thời gian soạn | Baseline trung vị 1–2 giờ (survey) → ≤ 30' **tính cả duyệt**; thêm tỉ lệ câu phải sửa và số lần dùng lại đề cũ | Baseline của 1 người cao hơn đa số; Elkins 2024: thời gian tiết kiệm bị dồn sang khâu duyệt nên phải đo cả duyệt |
+| Success Metric | Baseline 63–75' → 15–20', chỉ đo thời gian soạn | Baseline trung vị 1–2 giờ (survey) → ≤ 30' **tính cả duyệt**; thêm tỉ lệ câu phải sửa và số lần dùng lại đề cũ | Baseline của 1 người cao hơn đa số; Elkins 2024: thời gian viết quiz bằng AI gần bằng tự viết (nhóm suy luận do khâu duyệt) nên phải đo cả duyệt |
 | Mức chọn | Chưa chọn (bản nháp đầu: Agent) | Workflow | So sánh 4 mức ở mục 6: các nhánh đều biết trước, viết được thành Workflow; Agent chỉ thêm rủi ro |
 | Boundary | AI không tự đưa đề, không dùng lại câu gắn cờ, gia sư duyệt | Thêm: AI không làm việc trực tiếp với học sinh; câu "AI soạn" phải gắn nhãn và được duyệt kỹ; gia sư chịu trách nhiệm cuối cùng | Desk research: câu do AI soạn dễ sai đáp án; 2/10 người trong survey coi kiểm tra đáp án là bước tốn nhất |
 
@@ -350,7 +353,7 @@ Vì sao:
 
 ## 9. Hạn chế và hướng tiếp theo
 
-- **Hạn chế:** quy trình chi tiết từng bước là bấm giờ của một gia sư; survey chỉ có 10 người, câu thời gian là khoảng (30–60', 1–2 giờ…) chứ không phải số phút; chưa có phỏng vấn sâu; các số "sau" ở mục 4 là kỳ vọng, chưa đo; ngân hàng câu hỏi, bản quyền đề và hiển thị công thức toán chưa được giải quyết.
+- **Hạn chế:** quy trình chi tiết từng bước là bấm giờ của một gia sư; survey chỉ có 10 người, câu thời gian là khoảng (30–60', 1–2 giờ…) chứ không phải số phút; chưa có phỏng vấn sâu; nhóm chưa dùng thử SmartTest nên thông tin SmartTest ở mục 3.3 chỉ dựa trên trang chủ và ghi chú trên lớp; các số "sau" ở mục 4 là kỳ vọng, chưa đo; ngân hàng câu hỏi, bản quyền đề và hiển thị công thức toán chưa được giải quyết.
 - **Hướng tiếp theo:** phỏng vấn 3 người đã chọn ở mục 3.2; thử SmartTest với một chủ đề; dựng ngân hàng câu hỏi nhỏ cho một chủ đề rồi chạy pilot 5 đề với bước duyệt của gia sư.
 
 ## 10. Tài liệu tham khảo
